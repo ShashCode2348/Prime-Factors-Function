@@ -27,7 +27,7 @@ def PrimeFactors(num):
             factor_str += (f' * {y}')
         else:
             factor_str += (f' * {y}^{z}')
-        for counter in range(z-1):
+        for _ in range(z-1):
             PrimeFactor.pop(0)
     print('The prime factors of ' + str(num) + ' are' + factor_str[2:])
 
