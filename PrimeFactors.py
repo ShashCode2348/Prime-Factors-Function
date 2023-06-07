@@ -1,4 +1,5 @@
 import math
+from sys import exit as ex
 
 def PrimeFactors(num):
     def Quotient():
@@ -29,5 +30,10 @@ def PrimeFactors(num):
             factor_str += (f' * {y}^{z}')
         for _ in range(z-1):
             PrimeFactor.pop(0)
-    print('The prime factors of ' + str(num) + ' are' + factor_str[2:])
+    return factor_str[2:]
 
+try:
+    num = int(input("Enter the number you wish to find the prime factor of: "))
+except ValueError:
+    ex("Incorrect value entered. Please try again.")
+print(f"Prime factorisation of {num}: {PrimeFactors(num)}")
