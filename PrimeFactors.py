@@ -3,11 +3,6 @@ from sys import exit as ex
 
 #You can copy this function into your Python project if you do not want a terminal. You need to copy line 1 into your code if you do
 def PrimeFactors(num):
-    def Quotient():
-        quotient = 1
-        for n in PrimeFactor:
-            quotient *= n
-        return quotient
     number = abs(num)
     x = num
     global PrimeFactors
