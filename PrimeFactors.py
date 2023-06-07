@@ -1,6 +1,7 @@
-import math
+from math import ceil, sqrt
 from sys import exit as ex
 
+#You can copy this function into your Python project if you do not want a terminal. You need to copy line 1 into your code if you do
 def PrimeFactors(num):
     def Quotient():
         quotient = 1
@@ -11,7 +12,7 @@ def PrimeFactors(num):
     x = num
     global PrimeFactors
     PrimeFactor = [ ]
-    composites = set(j for i in range(2, math.ceil(math.sqrt(number))) for j in range(i*2, number, i))
+    composites = set(j for i in range(2, ceil(sqrt(number))) for j in range(i*2, number, i))
     primes = [x for x in range(2, number) if x not in composites]
     for prime in primes:
         while x % prime == 0:
